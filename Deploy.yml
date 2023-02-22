@@ -61,8 +61,8 @@ spec:
           #
           # 就绪探针，判断是否能工作
           readinessProbe:
-            periodSeconds: 1              # 执行探测的频率。默认是10秒，最小1秒
-            initialDelaySeconds: 5        # 容器启动后等待多少秒执行第一次探测
+            periodSeconds: 10             # 执行探测的频率。默认是10秒，最小1秒
+            initialDelaySeconds: 20       # 容器启动后等待多少秒执行第一次探测
             httpGet:
               scheme: HTTP
               port: 80

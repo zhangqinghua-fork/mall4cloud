@@ -36,6 +36,11 @@ public class DefaultAuthConfigAdapter implements AuthConfigAdapter {
 	 */
 	private static final String DOC_URI = "/v2/api-docs";
 
+	/**
+	 * 健康检查
+	 */
+	private static final String HEALTH_CHECK = "/actuator/health";
+
 	@Override
 	public List<String> pathPatterns() {
 		return Collections.singletonList("/*");
@@ -47,6 +52,7 @@ public class DefaultAuthConfigAdapter implements AuthConfigAdapter {
 		arrayList.add(DOC_URI);
 		arrayList.add(FEIGN_INSIDER_URI);
 		arrayList.add(EXTERNAL_URI);
+		arrayList.add(HEALTH_CHECK);
 		arrayList.addAll(Arrays.asList(paths));
 		return arrayList;
 	}

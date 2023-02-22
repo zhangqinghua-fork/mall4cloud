@@ -60,13 +60,13 @@ spec:
               value: Asia/Shanghai
           #
           # 就绪探针，判断是否能工作
-          readinessProbe:
-            periodSeconds: 10             # 执行探测的频率。默认是10秒，最小1秒
-            initialDelaySeconds: 20       # 容器启动后等待多少秒执行第一次探测
-            httpGet:
-              scheme: HTTP
-              port: 80
-              path: /actuator/health
+          # readinessProbe:
+          #   periodSeconds: 10             # 执行探测的频率。默认是10秒，最小1秒
+          #   initialDelaySeconds: 20       # 容器启动后等待多少秒执行第一次探测
+          #   httpGet:
+          #     scheme: HTTP
+          #     port: 80
+          #     path: /actuator/health
       restartPolicy: Always               # 重启策略
       terminationGracePeriodSeconds: 30   # 优雅停机毫秒
 
